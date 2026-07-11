@@ -1,0 +1,480 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #6F4E37;     /* Warm Coffee Brown */
+    --secondary-color: #C19A6B;   /* Soft Latte Gold */
+    --dark-bg: #2B1E16;          /* Dark Espresso Espresso */
+    --light-bg: #FDFBF7;         /* Creamy White */
+    --text-main: #332211;        /* Deep Charcoal Brown */
+    --text-muted: #665544;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* --- Reusable Components --- */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn-outline:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+/* --- Header & Navigation --- */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(43, 30, 22, 0.95);
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.logo {
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.navbar a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--secondary-color);
+}
+
+.header-btn {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+}
+
+/* --- Hero Section --- */
+.hero{
+
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("images/Moonlight Cafe.jfif");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    color:white;
+
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #eee;
+}
+
+.hero-buttons .btn {
+    margin: 0 10px;
+}
+
+/* --- About Section --- */
+.about {
+    padding: 100px 10%;
+    background-color: #f4efef;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color:var(--text-muted);
+    font-size:18px;
+    line-height:1.9;
+    margin-bottom:25px;
+}
+.about-text .btn{
+    width:220px;
+    text-align:center;
+    margin-top:10px;
+}
+.about-stats {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.stat-card {
+    background-color: var(--light-bg);
+    border: 1px solid rgba(193, 154, 107, 0.3);
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px;
+    width: 160px;
+}
+
+.stat-card h3 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+/* --- Menu Section --- */
+
+.menu{
+
+    padding:100px 8%;
+    background:#faf8f5;
+}
+
+.section-title{
+
+    text-align:center;
+    font-size:48px;
+    color:#5b3924;
+    margin-bottom:60px;
+}
+
+/* Grid */
+
+.menu-grid{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+}
+
+/* Card */
+
+.menu-card{
+
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.menu-card:hover{
+
+    transform:translateY(-8px);
+}
+
+/* Image */
+
+.menu-card img{
+
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+/* Content */
+
+.menu-content{
+
+    padding:30px;
+}
+
+.menu-content h3{
+
+    color:#5b3924;
+    margin-bottom:20px;
+    text-align:center;
+    font-size:30px;
+}
+
+/* List */
+
+.menu-content ul{
+
+    list-style:none;
+}
+
+.menu-content ul li{
+
+    display:flex;
+    justify-content:space-between;
+    padding:12px 0;
+    border-bottom:1px dashed #ddd;
+    font-size:18px;
+}
+
+.menu-content span{
+
+    font-weight:bold;
+    color:#8B5E3C;
+}
+
+/* Button */
+
+.menu-btn{
+
+    display:block;
+    width:180px;
+    margin:30px auto 0;
+    padding:14px;
+    text-align:center;
+    background:#8B5E3C;
+    color:white;
+    border-radius:40px;
+    transition:.3s;
+}
+
+.menu-btn:hover{
+
+    background:#d4a373;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.menu-grid{
+
+grid-template-columns:1fr;
+}
+
+}
+
+/* Container Layout */
+.review-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.review-section h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Individual Card Styling */
+.review-card {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Header inside Card */
+.reviewer-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.reviewer-name {
+  margin: 0;
+  font-size: 16px;
+  color: #222;
+}
+
+.review-date {
+  font-size: 12px;
+  color: #777;
+}
+
+/* Star Colors */
+.star-rating {
+  margin-bottom: 12px;
+}
+
+.star {
+  font-size: 20px;
+  color: #ccc; /* Color for empty stars */
+}
+
+.star.filled {
+  color: #ffcc00; /* Color for filled stars */
+}
+
+/* Body Text */
+.review-text {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}    
+
+/* --- Contact Section --- */
+.contact {
+    padding: 100px 10%;
+    background-color: var(--dark-bg);
+    color: #fff;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+}
+
+.contact p {
+    margin-bottom: 40px;
+    color: #ccc;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #443322;
+    background-color: rgba(255,255,255,0.05);
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* --- Footer Section --- */
+.footer {
+    background-color: #1A120C;
+    color: #887766;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid #2B1E16;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 4%;
+    }
+    .navbar {
+        display: none; /* In production, you would use JS to toggle a hamburger menu */
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-stats {
+        width: 100%;
+    }
+}
